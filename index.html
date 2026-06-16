@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NeutroQuant-Morph | Dataset</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="hero">
+        <div class="container text-center">
+            <div class="collaboration-badge">
+                In collaboration with Institute of Business Administration (IBA) & Quaid-i-Azam University
+            </div>
+            <h1 class="hero-title">NeutroQuant-Morph Dataset</h1>
+            <p class="hero-subtitle">A Multi-Condition Neutrophil Morphology and Segmentation Dataset</p>
+            
+            <div class="stats-container">
+                <div class="stat-card">
+                    <div class="stat-icon">🧪</div>
+                    <div class="stat-value">9</div>
+                    <div class="stat-label">Reagents</div>
+                    <div class="stat-desc">Blood samples prepared using 9 different staining/chemical conditions.</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon">🔬</div>
+                    <div class="stat-value">6</div>
+                    <div class="stat-label">Morphological Features</div>
+                    <div class="stat-desc">Human-annotated biological characteristics of neutrophils.</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon">🧩</div>
+                    <div class="stat-value">Multi-class</div>
+                    <div class="stat-label">Segmentation</div>
+                    <div class="stat-desc">Pixel-level labeling for whole cell and nucleus.</div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section class="banner-section">
+        <div class="container">
+            <h2 class="section-title">Sample Microscopy Images</h2>
+        </div>
+        <div class="banner-container">
+            <div class="banner-track" id="banner-track">
+                <!-- Images will be injected here via JS -->
+            </div>
+        </div>
+    </section>
+
+    <section class="segmentation-section">
+        <div class="container">
+            <h2 class="section-title">Segmentation Tasks</h2>
+            <p class="section-desc">The dataset supports multi-mask segmentation tasks, including the extraction of whole cells and specific cellular sub-structures.</p>
+            
+            <div class="segmentation-grid">
+                <div class="seg-card">
+                    <div class="seg-image-wrap">
+                        <img src="sampleimages/seg/orignal.png" alt="Original Image">
+                    </div>
+                    <h3 class="seg-title">1. Original Image</h3>
+                    <p>Raw microscope image of blood smear.</p>
+                </div>
+                <div class="seg-card">
+                    <div class="seg-image-wrap">
+                        <img src="sampleimages/seg/cellwall.png" alt="Cell Segmentation">
+                    </div>
+                    <h3 class="seg-title">2. Cell Segmentation</h3>
+                    <p>Entire cell boundary highlighted. Helps detect cell shape and size.</p>
+                </div>
+                <div class="seg-card">
+                    <div class="seg-image-wrap">
+                        <img src="sampleimages/seg/nuclearwall.png" alt="Nucleus Segmentation">
+                    </div>
+                    <h3 class="seg-title">3. Nucleus Segmentation</h3>
+                    <p>Only nucleus is highlighted. Important for morphology (medical diagnosis feature).</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="morphology-section">
+        <div class="container">
+            <h2 class="section-title">Morphological Attribute Labels</h2>
+            <p class="section-desc">The dataset includes structured biological labels for each cell.</p>
+            
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-header">
+                        <h3 class="feature-title">Cell Boundary Shape</h3>
+                    </div>
+                    <div class="feature-tags">Labels: Regular / Irregular</div>
+                    <p class="feature-desc">Captures abnormal cell deformation.</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-header">
+                        <h3 class="feature-title">Vacuolization</h3>
+                    </div>
+                    <div class="feature-tags">Labels: Yes / No</div>
+                    <p class="feature-desc">Indicates presence of vacuoles in cytoplasm (common in infections or toxicity).</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-header">
+                        <h3 class="feature-title">Membrane Discontinuity</h3>
+                    </div>
+                    <div class="feature-tags">Labels: Yes / No</div>
+                    <p class="feature-desc">Indicates whether the cell membrane is intact or damaged.</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-header">
+                        <h3 class="feature-title">Swelling</h3>
+                    </div>
+                    <div class="feature-tags">Labels: Yes / No</div>
+                    <p class="feature-desc">Indicates cell stress or pathological condition.</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-header">
+                        <h3 class="feature-title">Number of Lobes</h3>
+                    </div>
+                    <div class="feature-tags">Labels: 2, 3, 4, 5+</div>
+                    <p class="feature-desc">Neutrophils normally have segmented nuclei. Abnormal lobes indicate disease states.</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-header">
+                        <h3 class="feature-title">Nuclear Shape</h3>
+                    </div>
+                    <div class="feature-tags">Labels: Band / Lobed</div>
+                    <p class="feature-desc">Key hematology feature. Band = immature neutrophil, Lobed = mature neutrophil.</p>
+                </div>
+
+                <div class="feature-card" style="grid-column: 1 / -1; background-color: #f8f9fa;">
+                    <div class="feature-header">
+                        <h3 class="feature-title">Nuclear-to-Cytoplasmic Ratio (N:C Ratio)</h3>
+                    </div>
+                    <div class="feature-tags">Derived Feature</div>
+                    <p class="feature-desc">Ratio between nucleus size and cytoplasm. Very important in cancer detection and cell maturity analysis.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="ethics-section">
+        <div class="container">
+            <h2 class="section-title">Ethical Approval & Terms of Use</h2>
+            
+            <div class="ethics-card">
+                <h3 class="sub-title">Ethical Statement</h3>
+                <p>The microscopy images and data compiled in this dataset were acquired from human volunteer blood samples under the ethical approval granted by the Institutional Bioethics Committee of Quaid-i-Azam University, Islamabad, Pakistan, as part of an ongoing collaborative biomedical research initiative. All sample data have been completely de-identified and anonymized to ensure volunteer privacy.</p>
+                
+                <h3 class="sub-title" style="margin-top: 1.5rem;">Agreement Statement</h3>
+                <p>By accessing and downloading this dataset, you agree to comply with the terms and conditions outlined in our Data Usage Agreement. The dataset is provided strictly for academic and non-commercial research purposes.</p>
+                
+                <a href="termsandcondition/agreement.pdf" target="_blank" class="pdf-link">
+                    📄 Read the Full Terms and Conditions (PDF)
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section class="form-download-section">
+        <div class="container">
+            <h2 class="section-title">Data Access & Download</h2>
+            <div class="action-grid">
+                <div class="form-wrapper">
+                    <h3 class="sub-title">Request Access Form</h3>
+                    <p>Please complete the following form to record your access request. The download link will appear once the form has been successfully submitted.</p>
+                    <div class="iframe-container">
+                        <!-- We use onload to detect submission. First load is the form. Second load is the confirmation page. -->
+                        <iframe id="google-form" src="https://docs.google.com/forms/d/e/1FAIpQLScKWMB1ZqzApgzZApeZtObIQPhVX-v7n8rZtqO2dfc309XYYg/viewform?embedded=true" width="100%" height="100%" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+                    </div>
+                </div>
+                
+                <div class="download-wrapper">
+                    <h3 class="sub-title">Dataset Repository</h3>
+                    
+                    <div class="download-note">
+                        Note: Make sure to fill and submit the form above before downloading the dataset. The download button will become visible after submission.
+                    </div>
+
+                    <div id="download-btn-container">
+                        <p>Thank you for submitting the form. You may now access the dataset files.</p>
+                        <a href="https://drive.google.com/drive/folders/placeholder" target="_blank" class="download-btn">
+                            Download Dataset via Google Drive
+                        </a>
+                    </div>
+
+                    <div class="citation-box">
+                        <div class="citation-header">
+                            <h4>Academic Citation</h4>
+                            <button id="copy-citation" class="copy-btn">Copy to Clipboard</button>
+                        </div>
+                        <pre id="citation-text">@dataset{neutroquant_morph_2026,
+  author       = {Shaikh et al.},
+  title        = {NeutroQuant-Morph: A Multi-Condition Neutrophil Morphology and Segmentation Dataset},
+  year         = {2026},
+  institution  = {Institute of Business Administration (IBA) & Quaid-i-Azam University},
+}</pre>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2026 NeutroQuant-Morph Dataset Project. Collaborative Research by Institute of Business Administration (IBA) & Quaid-i-Azam University.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

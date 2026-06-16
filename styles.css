@@ -1,0 +1,381 @@
+:root {
+    --bg-primary: #ffffff;
+    --bg-secondary: #f8f9fa;
+    --text-main: #212529;
+    --text-muted: #495057;
+    --accent-blue: #004085; /* Academic Navy Blue */
+    --accent-light-blue: #cce5ff;
+    --border-color: #dee2e6;
+    --font-heading: 'Times New Roman', Times, serif;
+    --font-body: 'Arial', Helvetica, sans-serif;
+    --transition: all 0.2s ease-in-out;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--bg-primary);
+    color: var(--text-main);
+    font-family: var(--font-body);
+    line-height: 1.6;
+}
+
+.text-center { text-align: center; }
+
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Typography */
+h1, h2, h3, h4 {
+    font-family: var(--font-heading);
+    color: var(--accent-blue);
+    margin-bottom: 1rem;
+    font-weight: normal;
+}
+
+.section-title {
+    font-size: 2rem;
+    border-bottom: 2px solid var(--accent-blue);
+    padding-bottom: 0.5rem;
+    margin-bottom: 2rem;
+}
+
+.section-desc {
+    color: var(--text-muted);
+    margin-bottom: 2rem;
+}
+
+/* Hero Section */
+.hero {
+    padding: 4rem 0 3rem;
+    background-color: var(--bg-secondary);
+    border-bottom: 1px solid var(--border-color);
+}
+
+.collaboration-badge {
+    font-size: 1.1rem;
+    margin-bottom: 1.5rem;
+    color: var(--text-main);
+    font-style: italic;
+}
+
+.hero-title {
+    font-size: 2.8rem;
+    font-weight: bold;
+}
+
+.hero-subtitle {
+    font-size: 1.2rem;
+    color: var(--text-muted);
+    margin-bottom: 3rem;
+}
+
+/* Stats Container */
+.stats-container {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+    margin-top: 2rem;
+}
+
+.stat-card {
+    background: #fff;
+    border: 1px solid var(--border-color);
+    padding: 1.5rem;
+    width: 250px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+.stat-icon {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+}
+
+.stat-value {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: var(--accent-blue);
+}
+
+.stat-label {
+    font-size: 1.1rem;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+}
+
+.stat-desc {
+    font-size: 0.9rem;
+    color: var(--text-muted);
+}
+
+/* Banner Section */
+.banner-section {
+    padding: 3rem 0;
+    overflow: hidden;
+}
+
+.banner-container {
+    width: 100%;
+    background: #111;
+    overflow: hidden;
+    white-space: nowrap;
+    border-top: 1px solid var(--border-color);
+    border-bottom: 1px solid var(--border-color);
+    padding: 15px 0;
+}
+
+.banner-track {
+    display: inline-flex;
+    height: 300px;
+    animation: scroll-banner 30s linear infinite;
+}
+
+.banner-track:hover {
+    animation-play-state: paused;
+}
+
+.banner-slide {
+    display: inline-block;
+    height: 100%;
+    margin: 0 10px;
+}
+
+.banner-slide img {
+    height: 100%;
+    object-fit: contain;
+    border: 1px solid #333;
+}
+
+@keyframes scroll-banner {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+}
+
+/* Segmentation Section */
+.segmentation-section {
+    padding: 3rem 0;
+    background-color: var(--bg-secondary);
+}
+
+.segmentation-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+}
+
+.seg-card {
+    background: #fff;
+    border: 1px solid var(--border-color);
+    padding: 1rem;
+    text-align: center;
+}
+
+.seg-image-wrap {
+    width: 100%;
+    aspect-ratio: 1;
+    margin-bottom: 1rem;
+    border: 1px solid var(--border-color);
+    background: #000;
+}
+
+.seg-image-wrap img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.seg-title {
+    font-size: 1.1rem;
+    font-weight: bold;
+}
+
+/* Morphology Features Section */
+.morphology-section {
+    padding: 3rem 0;
+}
+
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+}
+
+.feature-card {
+    border: 1px solid var(--border-color);
+    padding: 1.5rem;
+    background: #fff;
+}
+
+.feature-header {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.feature-title {
+    font-size: 1.1rem;
+    font-weight: bold;
+    margin: 0;
+}
+
+.feature-tags {
+    margin-bottom: 1rem;
+    font-size: 0.9rem;
+    color: var(--accent-blue);
+    font-weight: bold;
+}
+
+.feature-desc {
+    color: var(--text-muted);
+    font-size: 0.95rem;
+}
+
+/* Form and Download Section */
+.form-download-section {
+    padding: 3rem 0 4rem;
+    background-color: var(--bg-secondary);
+    border-top: 1px solid var(--border-color);
+}
+
+/* Ethics Section */
+.ethics-section {
+    padding: 3rem 0;
+}
+
+.ethics-card {
+    background: #fff;
+    border: 1px solid var(--border-color);
+    padding: 2rem;
+    border-left: 4px solid var(--accent-blue);
+    margin-top: 1rem;
+}
+
+.pdf-link {
+    display: inline-block;
+    margin-top: 1.5rem;
+    color: var(--accent-blue);
+    text-decoration: none;
+    font-weight: bold;
+    border: 1px solid var(--accent-blue);
+    padding: 0.75rem 1.25rem;
+    transition: var(--transition);
+}
+
+.pdf-link:hover {
+    background: var(--accent-blue);
+    color: #fff;
+}
+
+.action-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.sub-title {
+    font-size: 1.4rem;
+    margin-bottom: 1rem;
+    border-bottom: 1px solid var(--border-color);
+    padding-bottom: 0.5rem;
+}
+
+.iframe-container {
+    background: #fff;
+    border: 1px solid var(--border-color);
+    height: 600px;
+    margin-bottom: 2rem;
+}
+
+.download-wrapper {
+    background: #fff;
+    border: 1px solid var(--border-color);
+    padding: 2rem;
+}
+
+.download-note {
+    color: #856404;
+    background-color: #fff3cd;
+    border: 1px solid #ffeeba;
+    padding: 0.75rem 1.25rem;
+    margin-bottom: 1.5rem;
+    font-weight: bold;
+}
+
+#download-btn-container {
+    display: none; /* Hidden initially */
+    margin: 1.5rem 0;
+}
+
+.download-btn {
+    display: inline-block;
+    background: var(--accent-blue);
+    color: white;
+    text-decoration: none;
+    padding: 0.75rem 1.5rem;
+    font-weight: bold;
+    border: 1px solid #002752;
+}
+
+.download-btn:hover {
+    background: #002752;
+}
+
+.citation-box {
+    background: #f8f9fa;
+    border: 1px solid var(--border-color);
+    margin-top: 2rem;
+}
+
+.citation-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 15px;
+    background: #e9ecef;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.citation-header h4 {
+    margin: 0;
+    font-size: 1rem;
+    color: var(--text-main);
+}
+
+.copy-btn {
+    background: #fff;
+    border: 1px solid var(--border-color);
+    padding: 4px 10px;
+    cursor: pointer;
+}
+
+.copy-btn:hover {
+    background: #e2e6ea;
+}
+
+pre {
+    padding: 15px;
+    font-size: 0.9rem;
+    overflow-x: auto;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+/* Footer */
+.footer {
+    border-top: 1px solid var(--border-color);
+    padding: 2rem 0;
+    text-align: center;
+    color: var(--text-muted);
+    font-size: 0.9rem;
+}
